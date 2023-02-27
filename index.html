@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<link href="../css/style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap" rel="stylesheet">
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
+
+
+
+</head>
+<html lang="PT">
+  <body>
+  <header>
+    <h1 class="title">Lista de Tarefas</h1>
+    <div class="cronometro">
+      <div id="cronometro-valores">
+      <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+      </div>
+      <button type="button" id="start" class="btn btn-outline-secondary" onclick="controllerCronometro.start()">start</button>
+      <button type="button" id="pause"  class="btn btn-outline-secondary"onclick="controllerCronometro.pause()">pause</button>
+      <button type="button" id="reset"  class="btn btn-outline-secondary" onclick="controllerCronometro.reset()">reset</button>
+  </div>
+  </header>
+  <div class="todolist container-fluid d-flex">
+    <div class="container-tarefas border">
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">tarefa</span>
+          <input type="text" class="form-input form-control" maxlength="75" placeholder="digite uma tarefa e clique em Inserir" aria-label="Username" aria-describedby="addon-wrapping" data-form-input placeholder="digite sua tarefa">
+          <button type="button"  class="btn btn-outline-primary" data-form-button onclick="controller.insereTarefa(event)">Inserir</button>
+        </div>
+        <div id="lista_container">
+            <table class="tabela" data-tabela></table>            
+        </div>
+    </div>
+    <div class="chart-container border d-flex justify-content-center align-items-start flex-column">
+        <canvas id="myChart" width="600px"></canvas>
+        <div class="tarefasContador d-flex">
+          <p>Tarefas Pendentes:<span></span></p>
+          <p>Tarefas Concluídas:<span></span></p>
+        </div>
+    </div>           
+  </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script type="module" src="../controller/chartController.js"></script>
+  
+  <script src="../view/tarefaView.js"></script>
+  <script src="../controller/controller.js"></script>
+  <script src="../controller/cronometroController.js"></script>
+  <script src="../model/listaTarefas.js"></script>
+  <script src="../model/tarefaModel.js"></script>
+  <script src="../controller/chartController.js"></script>
+  
+  
+  
+  
+  
+
+  <script>
+    let controller = new tarefaController;
+    let controllerCronometro = new cronometroController(0,0,0,0)
+    
+
+    
+
+  
+    
+
+    
+
+    
+
+    
+
+        
+
+      
+
+    
+    
+
+  
+       
+
+  </script>
+</html>
