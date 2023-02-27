@@ -1,0 +1,172 @@
+.app {
+  display:flex;
+  align-items:center;
+  justify-content: center;	
+	width: 100vw;	
+	min-height: 100vh;
+}
+
+.todolist{
+  
+	font-family: "Space Mono", monospace;	
+	padding: 1rem;	
+	min-width: 400px;	
+	height: 100vh;
+  
+}
+
+.title{
+  
+  color: #31380c;
+  width: 80%;
+  font-family: 'Lobster', cursive;
+}
+
+.form{
+  
+  display:flex;
+  justify-content:center
+}
+
+.form-button{
+  
+  margin-left:0.50rem;
+  padding:13px;
+  border-radius:5px;
+  background-color:#fffb83;
+  color:#31380c;
+  font-weight:bold;
+  font-size:15px;
+  border:solid, 5px;
+  
+}
+
+.form-button:hover{
+  
+  background-color:#b8b751;
+  
+}
+
+.form-input{
+  min-width:300px;
+  min-height:30px;
+  border-radius:5px;
+  
+}
+
+.tabela{
+  
+  padding:15px;
+  margin-top:2em;
+  width:90%
+  
+}
+
+.tabela td{
+  
+  padding:5px;
+  color:black;
+  font-family: 'Lobster', cursive;
+  font-size:1.3em;
+  
+  
+
+
+  
+}
+
+
+
+.muda-id{
+
+  width: 90%;
+}
+
+  .button-lista{
+    
+  margin-left:0.50rem;
+  padding:5px;
+  border-radius:5px;
+  background-color:#fffb83;
+  color:#31380c;
+  font-weight:bold;
+  font-size:13px;
+  border:solid, 5px;
+    
+    
+  }
+
+.table-button{
+  
+  padding:5px;
+  border-radius:5px;
+}
+
+.concluir{
+  
+text-decoration: line-through;
+  
+}
+
+header{
+
+  display: flex;
+  border-bottom: 2px solid;
+  padding-bottom: 0.5em;
+}
+
+.cronometro{
+
+  display: flex;
+  align-items: center;
+}
+
+#cronometro-valores{
+
+  margin-right: 0.5em;
+  font-size: 1em;
+}
+
+#lista_container{
+
+  display: flex;
+}
+
+
+
+.container-tarefas{
+  width: 50%;
+  background-color: #f8f9fa;
+  margin-right:1em;
+  padding:1em;
+  height: 90%;
+
+}
+
+.input-tarefa{
+
+  width:90%;
+}
+
+.linha-tarefa{
+
+  width:90%;
+}
+
+.pendente, .concluir{
+
+  width: 90%;
+}
+
+.chart-container{
+
+  background-color: #f8f9fa;
+  height: 80%;
+  width: 40%;
+  padding: 1em;
+
+}
+
+
+
+
