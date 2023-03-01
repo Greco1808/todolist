@@ -61,7 +61,7 @@ const { value: fruit } = await Swal.fire({
     })
 
       if (fruit) {
-        let corpoLista = document.querySelector('.todolist')
+        let corpoLista = document.querySelector('.body')
         corpoLista.style.backgroundColor = fruit
         
       }
