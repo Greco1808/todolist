@@ -9,17 +9,18 @@
 .todolist{
   
 	font-family: "Space Mono", monospace;	
-	padding: 1rem;	
+	padding: 1em 0;
 	min-width: 400px;	
-	height: 100vh;
+	
   
 }
 
 .title{
   
   color: #31380c;
-  width: 80%;
+  width: 70%;
   font-family: 'Lobster', cursive;
+  margin-left: 2.4em;
 }
 
 .form{
@@ -113,23 +114,32 @@ header{
   display: flex;
   border-bottom: 2px solid;
   padding-bottom: 0.5em;
+  background-color: #f8f9fa;
 }
 
 .cronometro{
 
   display: flex;
   align-items: center;
+  
+  
 }
 
 #cronometro-valores{
-
+  margin: 0 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-right: 0.5em;
   font-size: 1em;
+  font-size: 1em;
+
 }
 
 #lista_container{
 
   display: flex;
+  
 }
 
 
@@ -139,7 +149,7 @@ header{
   background-color: #f8f9fa;
   margin-right:1em;
   padding:1em;
-  height: 90%;
+  min-height: 90%;
 
 }
 
@@ -167,6 +177,76 @@ header{
 
 }
 
+.tarefasContador{
+
+margin-top: 1em;
+font-size: 1em;
+
+}
 
 
+
+#qtd-pendente-paragrafo{
+
+  color:rgb(250, 28, 76);
+  margin-right: 2em;
+
+}
+
+#qtd-concluida-paragrafo{
+
+  color:rgb(29, 107, 158);
+}
+
+#qtd-pendentes-chart{
+
+  color:rgb(255, 99, 132);
+  font-weight:bold;
+}
+
+#qtd-concluidas-chart{
+
+  color:rgb(54, 162, 235);
+  font-weight:bold;
+
+}
+
+.btn-cronometro{
+
+  margin-left: 0.2em;
+}
+
+#cronometro-contador{
+
+  max-width: 4em;
+}
+
+#btn-cronometro-container{
+
+  margin-left:2em;
+}
+
+.pdf{
+
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.btn-pdf{
+
+  margin-left:1em;
+}
+
+.cronometro-pdf-container{
+
+  display: flex;
+  width: 50%;
+  padding: 0.7em;
+  background-color: #f8f9fa;
+}
+
+.container-master{
+  margin-left: 2em;
+}
 
