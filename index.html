@@ -9,24 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&display=swap" rel="stylesheet">
 <link href="../css/bootstrap.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/0bb11c30c5.js" crossorigin="anonymous"></script>
 
 
 
 </head>
 <html lang="PT">
-  <body>
+  
   <header>
     <h1 class="title">Lista de Tarefas</h1>
-    <div class="cronometro">
-      <div id="cronometro-valores">
-      <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
-      </div>
-      <button type="button" id="start" class="btn btn-outline-secondary" onclick="controllerCronometro.start()">start</button>
-      <button type="button" id="pause"  class="btn btn-outline-secondary"onclick="controllerCronometro.pause()">pause</button>
-      <button type="button" id="reset"  class="btn btn-outline-secondary" onclick="controllerCronometro.reset()">reset</button>
   </div>
   </header>
-  <div class="todolist container-fluid d-flex">
+  <body class="body">
+
+  <div class="container-master d-flex flex-column">
+    <div class="todolist d-flex ">
     <div class="container-tarefas border">
         <div class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping">tarefa</span>
@@ -37,17 +34,45 @@
             <table class="tabela" data-tabela></table>            
         </div>
     </div>
-    <div class="chart-container border d-flex justify-content-center align-items-start flex-column">
+    <div class="chart-container border d-flex justify-content-center align-items-center flex-column">
+      <div class="tarefasContador d-flex">
+        <p id="qtd-pendente-paragrafo">Tarefas Pendentes:<span id="qtd-pendentes-chart">0</span></p>
+        <p id="qtd-concluida-paragrafo">Tarefas Concluídas:<span id="qtd-concluidas-chart">0</span></p>
+      </div>
         <canvas id="myChart" width="600px"></canvas>
-        <div class="tarefasContador d-flex">
-          <p>Tarefas Pendentes:<span></span></p>
-          <p>Tarefas Concluídas:<span></span></p>
-        </div>
     </div>           
   </div>
+  <div class="cronometro-pdf-container d-flex border">
+    <div class="cronometro">
+      <i class="fa fa-clock fa-2x" aria-hidden="true"></i>
+        <div id="cronometro-valores">
+          <div id="cronometro-contador">
+            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+          </div>
+          <div id="btn-cronometro-container">
+            <button type="button" id="start"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.start()">start</button>
+            <button type="button" id="pause"  class="btn btn-outline-secondary btn-cronometro"onclick="controllerCronometro.pause()">pause</button>
+            <button type="button" id="reset"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.reset()">reset</button>
+          </div>
+        </div>
+    </div>
+    <div class="pdf">
+      <i class="fa fa-solid fa-file-pdf fa-2x"></i>
+      <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="">Exportar para PDF</button>
+
+
+
+    </div>
+  </div>
+
+  </div>
+  
+    
   </body>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
@@ -64,32 +89,19 @@
   
   
   
+  
 
   <script>
     let controller = new tarefaController;
     let controllerCronometro = new cronometroController(0,0,0,0)
-    
 
-    
+    //var doc = new jsPDF()
 
-  
-    
-
-    
+//doc.text('Hello world!', 10, 10)
+//doc.save('a4.pdf')
 
     
 
     
-
-        
-
-      
-
-    
-    
-
-  
-       
-
   </script>
 </html>
