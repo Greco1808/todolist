@@ -58,7 +58,7 @@
     </div>
     <div class="pdf">
       <i class="fa fa-solid fa-file-pdf fa-2x"></i>
-      <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="">Exportar para PDF</button>
+      <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="generatePDF()">Exportar para PDF</button>
 
 
 
@@ -100,6 +100,9 @@
 //doc.text('Hello world!', 10, 10)
 //doc.save('a4.pdf')
 
+
+function generatePDF(){
+  
     var doc = new jsPDF();   
 
 doc.html(document.body, {
@@ -107,6 +110,7 @@ doc.html(document.body, {
      doc.save();
    }
 });
+}
   
 
 
