@@ -105,9 +105,9 @@ function generatePDF(){
   
     var doc = new jsPDF();   
 
-doc.html(document.body, {
+   doc.html(document.querySelector(".todolist"), {
    callback: function (doc) {
-     doc.save();
+    doc.save();
    }
 });
 }
