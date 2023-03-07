@@ -104,10 +104,11 @@
 function generatePDF(){
   
     var doc = new jsPDF({
-    orientation: 'landscape'
+    orientation: 'landscape',
+    align:'left'
     });   
     var scale = 4
-
+   
    doc.html(document.querySelector(".tabela"), {
    html12canvas:{
      scale: scale,
