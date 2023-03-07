@@ -110,11 +110,11 @@ function generatePDF(){
     var scale = 4
     var teste = document.querySelector(".pendente").textContent
    doc.text(teste,10,10)
-   doc.html(document.querySelector(".tabela"), {
-   html12canvas:{
-     scale: scale,
-   },
-   callback: function (doc) {
+   //doc.html(document.querySelector(".tabela"), {
+   //html12canvas:{
+     //scale: scale,
+   //},
+   //callback: function (doc) {
     doc.save();
    }
 });
