@@ -106,8 +106,12 @@ function generatePDF(){
     var doc = new jsPDF({
     orientation: 'landscape'
     });   
+    var scale = 0.5
 
    doc.html(document.querySelector(".todolist"), {
+   html12canvas:{
+     scale: scale,
+   },
    callback: function (doc) {
     doc.save();
    }
