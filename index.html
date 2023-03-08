@@ -59,6 +59,8 @@
     <div class="pdf">
       <i class="fa fa-solid fa-file-pdf fa-2x"></i>
       <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="generatePDF()">Exportar para PDF</button>
+      <img src=""
+      
 
 
 
@@ -101,24 +103,47 @@
 //doc.save('a4.pdf')
 
 
-//function generatePDF(){
+function generatePDF(){
   
-    //var doc = new jsPDF({
-    //orientation: 'landscape',
-    //align:'left'
-    //});   
-    //var scale = 4
-    //var teste = document.querySelector(".pendente").textContent
-   //doc.text(teste,10,10)
+    var doc = new jsPDF({
+    orientation: 'portrait',
+    unit:'px'
+
+    });   
+    
+
+    
+    var img = canvas.toDataUrl("../img/carta.jpg")
+    doc.addImage(img,"JPG",0,0)
+    var titulo = document.querySelector(".title").textContent
+    var listaTarefas = document.querySelectorAll("[data-tarefa]")
+
+    doc.text(titulo,50,20)
+    var x = 50
+    var y = 70
+
+
+    for(i =0 ; i < listaTarefas.length ; i++){
+      
+      doc.text(listaTarefas[i].textContent,x,y)
+      doc.rect(20,y-10,10,10)
+      y += 20;
+    }
+    
+
+    //doc.text(teste,10,10)
+    doc.save();
+
+    //console.log(document.querySelector(".tabela").offsetWidth)
    //doc.html(document.querySelector(".tabela"), {
-   //html12canvas:{
-     //scale: scale,
-   //},
+
    //callback: function (doc) {
-    //doc.save();
+    
    //}
-//});
-//}
+
+   
+};
+
   
 
 
@@ -127,3 +152,4 @@
     
   </script>
 </html>
+
