@@ -117,13 +117,13 @@ function generatePDF(){
     img.setAttribute("src","../img/carta.png")
 
     doc.addImage(img,"JPG",0,0)
-    doc.roundedRect(25,10,400,600,10,10)
+    
     var titulo = document.querySelector(".title").textContent
     var listaTarefas = document.querySelectorAll("[data-tarefa]")
 
-    doc.text(titulo,175,40)
+    doc.text(titulo,175,80)
     var x = 60
-    var y = 100
+    var y = 180
 
 
     for(i =0 ; i < listaTarefas.length ; i++){
