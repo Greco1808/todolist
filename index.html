@@ -59,7 +59,7 @@
     <div class="pdf">
       <i class="fa fa-solid fa-file-pdf fa-2x"></i>
       <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="generatePDF()">Exportar para PDF</button>
-      <img src=""
+      
       
 
 
@@ -112,21 +112,24 @@ function generatePDF(){
     });   
     
 
-    
-    var img = canvas.toDataUrl("../img/carta.jpg")
+    doc.setFontSize(20)
+    var img = document.createElement("img")
+    img.setAttribute("src","../img/carta.jpg")
+
     doc.addImage(img,"JPG",0,0)
+    doc.roundedRect(25,10,400,600,10,10)
     var titulo = document.querySelector(".title").textContent
     var listaTarefas = document.querySelectorAll("[data-tarefa]")
 
-    doc.text(titulo,50,20)
-    var x = 50
-    var y = 70
+    doc.text(titulo,175,40)
+    var x = 60
+    var y = 100
 
 
     for(i =0 ; i < listaTarefas.length ; i++){
       
       doc.text(listaTarefas[i].textContent,x,y)
-      doc.rect(20,y-10,10,10)
+      doc.rect(40,y-10,10,10)
       y += 20;
     }
     
