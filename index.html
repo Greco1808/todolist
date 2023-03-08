@@ -23,6 +23,25 @@
   <body class="body">
 
   <div class="container-master d-flex flex-column">
+     <div class="cronometro-pdf-container d-flex border">
+    <div class="cronometro">
+      <i class="fa fa-clock fa-2x" aria-hidden="true"></i>
+        <div id="cronometro-valores">
+          <div id="cronometro-contador">
+            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+          </div>
+          <div id="btn-cronometro-container">
+            <button type="button" id="start"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.start()">start</button>
+            <button type="button" id="pause"  class="btn btn-outline-secondary btn-cronometro"onclick="controllerCronometro.pause()">pause</button>
+            <button type="button" id="reset"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.reset()">reset</button>
+          </div>
+        </div>
+    </div>
+    <div class="pdf">
+      <i class="fa fa-solid fa-file-pdf fa-2x"></i>
+      <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="generatePDF()">Exportar para PDF</button>
+    </div>
+  </div>
     <div class="todolist d-flex ">
     <div class="container-tarefas border">
         <div class="input-group flex-nowrap">
@@ -42,30 +61,7 @@
         <canvas id="myChart" width="600px"></canvas>
     </div>           
   </div>
-  <div class="cronometro-pdf-container d-flex border">
-    <div class="cronometro">
-      <i class="fa fa-clock fa-2x" aria-hidden="true"></i>
-        <div id="cronometro-valores">
-          <div id="cronometro-contador">
-            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
-          </div>
-          <div id="btn-cronometro-container">
-            <button type="button" id="start"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.start()">start</button>
-            <button type="button" id="pause"  class="btn btn-outline-secondary btn-cronometro"onclick="controllerCronometro.pause()">pause</button>
-            <button type="button" id="reset"  class="btn btn-outline-secondary btn-cronometro" onclick="controllerCronometro.reset()">reset</button>
-          </div>
-        </div>
-    </div>
-    <div class="pdf">
-      <i class="fa fa-solid fa-file-pdf fa-2x"></i>
-      <button type="button" class="btn btn-outline-secondary btn-pdf" onclick="generatePDF()">Exportar para PDF</button>
-      
-      
-
-
-
-    </div>
-  </div>
+ 
 
   </div>
   
