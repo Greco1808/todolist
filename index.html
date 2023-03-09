@@ -112,18 +112,18 @@ function generatePDF(){
     
     console.log(doc.getFontList())
     doc.setDrawColor(0)
-    doc.setFillColor(240,248,255)
+    doc.setFillColor(13,110,253)
     doc.rect(0,0,836,1181,"F")
     
     var img = document.createElement("img")
     img.setAttribute("src","../img/carta.PNG")
     
-    doc.addImage(img,"JPG",30,50)
+    doc.addImage(img,"JPG",20,50)
     
     
     doc.setFont('Helvetica','bold',500)
     doc.setFontSize(20)
-    doc.text(titulo,40,70)
+    doc.text(titulo,30,70)
     var x = 60
     var y = 135
 
