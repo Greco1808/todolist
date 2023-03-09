@@ -107,21 +107,23 @@ function generatePDF(){
 
     });   
     
+    var titulo = document.querySelector(".title").textContent
+    var listaTarefas = document.querySelectorAll("[data-tarefa]")
 
-    doc.setFontSize(15)
+    console.log(doc.getFontList())
     var img = document.createElement("img")
     img.setAttribute("src","../img/carta.png")
 
     doc.addImage(img,"JPG",0,0)
     
-    var titulo = document.querySelector(".title").textContent
-    var listaTarefas = document.querySelectorAll("[data-tarefa]")
-
+    
+    
+    doc.setFontSize(20)
     doc.text(titulo,40,70)
     var x = 60
     var y = 135
 
-
+    doc.setFontSize(15)
     for(i =0 ; i < listaTarefas.length ; i++){
       
       doc.text(listaTarefas[i].textContent,x,y)
