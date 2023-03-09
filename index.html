@@ -111,8 +111,10 @@ function generatePDF(){
     var listaTarefas = document.querySelectorAll("[data-tarefa]")
     
     console.log(doc.getFontList())
-    doc.rect(0,0,836,1181)
-    doc.setFillColor(0.5,240,248,255)
+    doc.setDrawColor(0)
+    doc.setFillColor(240,248,255)
+    doc.rect(0,0,836,1181,"F")
+    
     var img = document.createElement("img")
     img.setAttribute("src","../img/carta.png")
     
