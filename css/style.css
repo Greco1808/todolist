@@ -241,9 +241,10 @@ font-size: 1em;
 .cronometro-pdf-container{
 
   display: flex;
-  width: 50%;
+  width: 92%;
   padding: 0.7em;
   background-color: #f8f9fa;
+  margin-top:1em;
 }
 
 .container-master{
