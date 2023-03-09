@@ -113,16 +113,17 @@ function generatePDF(){
     console.log(doc.getFontList())
     var img = document.createElement("img")
     img.setAttribute("src","../img/carta.png")
-
+    
     doc.addImage(img,"JPG",0,0)
     
     
-    
+    doc.setFont('Helvetica','bold',500)
     doc.setFontSize(20)
     doc.text(titulo,40,70)
     var x = 60
     var y = 135
 
+    doc.setFont('courier','normal',400)
     doc.setFontSize(15)
     for(i =0 ; i < listaTarefas.length ; i++){
       
